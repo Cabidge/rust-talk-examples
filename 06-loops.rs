@@ -9,21 +9,22 @@ fn main() {
     // Exit loops with `break` keyword
     let mut i = 0;
     loop {
+        println!("{}", i);
+        i += 1;
+
         if i == 10 {
             break;
         }
-        println!("{}", i);
-        i += 1;
     }
 
     // Loops can also return values with break
-    let mut i = 1;
+    let mut i = 0;
     let result = loop {
-        if i > 100 {
-            break i;
-        }
+        i += 1;
 
-        i *= 2;
+        if i == 10 {
+            break i * 2;
+        }
     };
     println!("result is {}", result);
 
