@@ -7,7 +7,7 @@ fn main() {
 // i32 represents a signed 32 bit integer
 fn double(x: i32) -> i32 {
     // This also works!
-    //return x * 2
+    //return x * 2;
 
     // The last expression of a function is implicitly returned
     x * 2
