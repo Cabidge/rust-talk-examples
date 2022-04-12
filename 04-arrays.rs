@@ -3,7 +3,7 @@ fn main() {
     // Arrays have a fixed size and are stored on the stack
     // The type of an array is denoted with [T; n] for an array of
     // some type T of size n
-    let mut x: [i32; 4] = [1, 2, 3, 4];
+    let mut x = [1, 2, 3, 4];
 
     // Indexing an array (0-based index)
     println!("The second element of x is {}", x[1]);
