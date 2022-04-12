@@ -11,16 +11,6 @@ impl<T> Point<T> {
     }
 }
 
-// Specific implementation of generic type
-impl Point<i32> {
-    fn origin() -> Self {
-        Self {
-            x: 0,
-            y: 0,
-        }
-    }
-}
-
 fn main() {
     // Rust can often infer the generic type
     let p = Point { x: 1, y: 2 };
@@ -41,10 +31,6 @@ fn main() {
 
     // Constructor with turbo fish
     let p = Point::<f32>::new(24.5, 22.5);
-    println!("x = {}, y = {}", p.x, p.y);
-
-    // Calling specific implementation function
-    let p = Point::<i32>::origin();
     println!("x = {}, y = {}", p.x, p.y);
 
     // Calling a generic function
