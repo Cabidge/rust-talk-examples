@@ -28,21 +28,13 @@ fn main() {
     };
     println!("result is {}", result);
 
-    // While loops exist
-    let mut i = 0;
-    while i < 10 {
-        println!("{}", i);
-        i += 1;
-    }
-
     // Iterate over Iterators with `for..in`
-    // More on Iterators later...
     let arr = [1, 2, 3, 4];
     for x in arr {
         println!("{}", x);
     }
 
-    // Iterate over a specific range with...ranges
+    // Iterate over a specific range with ranges
     // 0 to 10 non-inclusive
     for i in 0..10 {
         println!("{}", i);
