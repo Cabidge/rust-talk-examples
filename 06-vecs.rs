@@ -9,22 +9,27 @@ fn main() {
     v.push(2);
     v.push(3);
 
-    // Get the length of a Vec
-    println!("v is {} elements", v.len());
-
-    // Pop the last element of Vec
-    // Since pop returns an Option, we must unwrap to get the inner value
-    println!("The last element of v is {}", v.pop().unwrap());
-
     // Print the entire contents of Vec
     println!("{:?}", v);
+
+    // Index Vec with `[]`
+    println!("v[1] is {}", v[1]);
+
+    // Remove a specific index
+    // This is an O(n) operation because it shifts all subsequent elements over
+    println!("Removed v[2]: {}", v.remove(2));
 
     // Use the vec macro for concise Vec creation
     let v = vec![1, 2, 3];
     println!("{:?}", v);
 
-    // Iterate over Vec with the `.iter()` method
-    for element in v.iter() {
-        println!("{}", element);
-    }
+    // Calling a function that consumes a Vec
+    first_element(v);
+
+    // This no longer works!
+    //println!("{:?}", v);
+}
+
+fn first_element(v: Vec<i32>) {
+    println!("The first element is {}", v[0]);
 }
