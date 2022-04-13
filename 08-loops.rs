@@ -28,15 +28,22 @@ fn main() {
     };
     println!("result is {}", result);
 
-    // Iterate over Iterators with `for..in`
-    let arr = [1, 2, 3, 4];
-    for x in arr {
-        println!("{}", x);
-    }
-
     // Iterate over a specific range with ranges
     // 0 to 10 non-inclusive
     for i in 0..10 {
         println!("{}", i);
+    }
+
+    // Iterating over Vecs
+    let v = vec![1, 2, 3, 4];
+    // For loops take ownership of the given value, which will consume the Vec
+    //for x in v {
+    //    println!("{}", x);
+    //}
+    // Can't use `v` afterwards
+
+    // To keep ownership of Vec, use the `iter` method to borrow each element
+    for x in v.iter() {
+        println!("{}", x);
     }
 }
