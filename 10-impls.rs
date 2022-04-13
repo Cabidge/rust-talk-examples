@@ -1,4 +1,4 @@
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug)]
 struct Complex {
     real: f64,
     imag: f64,
@@ -18,7 +18,7 @@ impl Complex {
 
     // Using the `self` keyword as the first parameter turns
     // this function into a method that can be called with the dot syntax
-    fn magnitude(self) -> f64 {
+    fn magnitude(&self) -> f64 {
         // `.sqrt()` is a f64 method for taking the sqaure root
         (self.real * self.real + self.imag * self.imag).sqrt()
     }
