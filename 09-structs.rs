@@ -1,10 +1,10 @@
-// Create a struct without fields (unit struct)
+// Create a struct without fields
 // Use the derive macro to automatically implement Debug trait
-// Allows formatting via {:?}, more on traits later
+// Allows formatting via {:?}
 #[derive(Debug)]
 struct Error;
 
-// Create a struct with anonymous fields (tuple struct)
+// Create a struct with anonymous fields
 #[derive(Debug)]
 struct Point(i32, i32);
 
@@ -36,19 +36,4 @@ fn main() {
     // Access struct fields with dot syntax
     println!("i.real is {}", i.real);
     println!("i.imag is {}", i.imag);
-
-    // Struct instantiation shorthand
-    let real = 2.4;
-    let imag = 3.6;
-    let comp = Complex { real, imag };
-    println!("{:#?}", comp);
-
-    // Mutability is inherited by struct fields
-    // For fields to be mutable, the variable must be mutable
-    // This doesn't work!
-    //comp.real = 1.0;
-    let mut comp = Complex { real, imag };
-    println!("real is {}", comp.real);
-    comp.real = 1.0;
-    println!("real is now {}", comp.real);
 }
