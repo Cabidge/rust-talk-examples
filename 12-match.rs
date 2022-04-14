@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone)]
 enum Coin {
     Penny,
     Nickel,
