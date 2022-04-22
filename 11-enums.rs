@@ -33,16 +33,4 @@ fn main() {
     // Instantiating variants with associated types
     let maybe = MaybeInt::Some(12);
     println!("{:?}", maybe);
-
-    // Built-in Option enum to represent nullable values
-    let maybe = Option::Some(12);
-    println!("{:?}", maybe);
-    let maybe = Option::<i32>::None;
-    println!("{:?}", maybe);
-
-    // Option variants are automatically imported
-    let maybe = Some(12);
-    println!("{:?}", maybe);
-    let maybe: Option<i32> = None; // None needs an explicit generic type parameter
-    println!("{:?}", maybe);
 }

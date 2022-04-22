@@ -16,29 +16,15 @@ fn main() {
     let p = Point { x: 1, y: 2 };
     println!("x = {}, y = {}", p.x, p.y);
 
-    // This doesn't work!
-    // An i32 != f64
-    //let p = Point { x: 1, y: 2.0 };
-
-    // You can be explicit about types by using
-    // the turbo fish operator (::<>)
-    let p = Point::<u8> { x: 1, y: 2 };
-    println!("x = {}, y = {}", p.x, p.y);
-
     // Calling generic constructor
     let p = Point::new(1.2, 2.1);
     println!("x = {}, y = {}", p.x, p.y);
 
-    // Constructor with turbo fish
-    let p = Point::<f32>::new(24.5, 22.5);
-    println!("x = {}, y = {}", p.x, p.y);
-
     // Calling a generic function
     println!("{}", identity(1));
-    println!("{}", identity::<u8>(1));
-
-    // Generic add function
-    println!("{}", add(1, 2));
+    println!("{}", identity(2.3));
+    print_len(vec![1, 2, 5]);
+    print_len(vec!["hi", "wowee"]);
 }
 
 // Generic function definition
@@ -48,6 +34,6 @@ fn identity<T>(x: T) -> T { x }
 //fn add<T>(a: T, b: T) -> T { a + b }
 
 // Type constraints for specifying expected type behavior
-fn add<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
-    a + b
+fn print_len<T>(v: Vec<T>) {
+    println!("The vec has {} elements", v.len());
 }
