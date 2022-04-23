@@ -9,3 +9,34 @@ pub fn add3(n: i32) -> i32 {
 fn add(lhs: i32, rhs: i32) -> i32 {
     lhs + rhs
 }
+
+// Using the `#[test]` macro marks a function as a unit test
+#[test]
+fn add_test() {
+    // Use the `assert` macro to define an expected result
+    assert!(1 == 1);
+
+    // This fails!
+    //assert!(1 != 1);
+
+    // Use `assert_eq` to create assertions of equality
+    assert_eq!(add(1, 1), 2);
+
+    // This fails!
+    //assert_eq!(add(1, 1), 3);
+}
+
+// Unit tests are often put inside their own sub module literal
+// in the same file as what they are testing
+#[cfg(test)]
+mod tests {
+    // Use `use` to import the add functions
+    use super::*;
+
+    // Use the `#[should_panic]` macro to define a test that "should fail"
+    #[test]
+    #[should_panic]
+    fn should_fail() {
+        assert_eq!(add3(3), 0);
+    }
+}
