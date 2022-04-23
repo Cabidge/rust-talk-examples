@@ -15,7 +15,9 @@
 // Functions are defined with the `fn` keyword
 // All rust programs start with a `main` function
 fn main() {
-    // The println macro can be used to print to stdout
+    // Use `println` to print to the standard output
+    // `println` is a macro, NOT a function, so it requires a `!`
+    // Macros are an advanced topic that can be treated as "magic" for now
     // Most statements must end with a `;`.
     println!("Hello, world!");
 }
