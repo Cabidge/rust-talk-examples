@@ -50,3 +50,8 @@ fn main() {
         .collect();
     println!("{:?}", even_squares);
 }
+
+// Factorial function created with iterators
+fn factorial(n: u32) -> u32 {
+    (0..=n).product()
+}
