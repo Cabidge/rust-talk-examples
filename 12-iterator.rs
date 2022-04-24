@@ -19,23 +19,14 @@ fn main() {
         println!("{}", i);
     }
 
-    // Creating an inclusive range with `n..=m`
-    for i in 0..=10 {
-        println!("{}", i);
-    }
-
     // Functions are allowed to be declared inside other functions
-    // Factorial function created with iterators
-    fn factorial(n: u32) -> u32 {
-        (1..=n).product()
+    fn square(n: i32) -> i32 {
+        n * n
     }
-
-    let result = factorial(5);
-    println!("{}", result);
 
     // The map method apply a function on every element of an iterator
     // You can create a function without defining a name by creating a closure
-    (0..10).map(factorial)
+    (0..10).map(square)
         .for_each(
             |n: i32| {
                 println!("{}", n);
