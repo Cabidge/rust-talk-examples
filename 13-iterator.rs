@@ -15,12 +15,12 @@ fn main() {
 
     // Creating a range iterator with `n..m`
     // Goes from n to m non-inclusive
-    for i in 0..10 {
+    for i in 0..4 {
         println!("{}", i);
     }
 
     // Creating an inclusive range with `n..=m`
-    for i in 0..=10 {
+    for i in 0..=4 {
         println!("{}", i);
     }
 
