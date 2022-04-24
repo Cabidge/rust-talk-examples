@@ -15,18 +15,14 @@ fn main() {
 
     // Creating a range iterator with `n..m`
     // Goes from n to m non-inclusive
-    for i in 0..4 {
+    for i in 0..10 {
         println!("{}", i);
     }
 
     // Creating an inclusive range with `n..=m`
-    for i in 0..=4 {
+    for i in 0..=10 {
         println!("{}", i);
     }
-
-    // Calling the product method consumes the iterator
-    // and returns the product of all the numbers
-    println!("{}", (1..=4).product());
 
     // Functions are allowed to be declared inside other functions
     // Factorial function created with iterators
