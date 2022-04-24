@@ -1,33 +1,32 @@
 #[derive(Debug)]
-struct Complex {
-    real: f64,
-    imag: f64,
+struct Rect {
+    width: u32,
+    height: u32,
 }
 
 // Create associated functions and methods with `impl` keyword
-impl Complex {
+impl Rect {
     // `Self` keyword is an alias for the impl type,
-    // which in this case is `Complex`
+    // which in this case is `Rect`
     // The "constructor function" is named `new` by convention
-    fn new(real: f64, imag: f64) -> Self {
-        Self {
-            real,
-            imag,
-        }
+    fn new(width: u32, height: u32) -> Self {
+        // When the field and variable names are the same,
+        // there is no need to write `field: value`
+        Self { width, height }
     }
 
     // Using the `self` keyword as the first parameter turns
     // this function into a method that can be called with the dot syntax
-    fn magnitude(&self) -> f64 {
-        f64::sqrt(self.real * self.real + self.imag * self.imag)
+    fn area(&self) -> u32 {
+        self.width * self.height
     }
 }
 
 fn main() {
     // To call an associated function, use the `<type>::<func>` syntax
-    let comp = Complex::new(3.0, 4.0);
-    println!("{:#?}", comp);
+    let rect = Rect::new(12, 3);
+    println!("{:#?}", rect);
 
     // Calling struct methods
-    println!("{}", comp.magnitude());
+    println!("{}", rect.area());
 }
