@@ -1,6 +1,5 @@
 fn main() {
-    // A Vec, or vector, is a dynamically sized list of elements,
-    // meaning you can add or remove as many elements as you want
+    // A Vec, or vector, is a dynamically sized list of elements
     // To create a new Vec, use the Vec::new() function
     let mut v = Vec::new();
 
@@ -17,7 +16,8 @@ fn main() {
 
     // Remove a specific index
     // This is an O(n) operation because it shifts all subsequent elements over
-    println!("Removed v[2]: {}", v.remove(2));
+    println!("Removed v[0]: {}", v.remove(0));
+    println!("{:?}", v);
 
     // Use the vec macro for concise Vec creation
     let v = vec![1, 2, 3];
