@@ -10,12 +10,6 @@ fn main() {
         None => println!("We don't have a number"),
     }
 
-    // Must be exhaustive
-    // This doesn't work!
-    //match opt {
-    //    Some(10) => println!("10 is the magic number"),
-    //}
-
     // Pipe to define alternatives
     match opt {
         Some(10) | Some(-10) => println!("10 is the magic number"),
@@ -31,13 +25,6 @@ fn main() {
     }
 
     // Wildcard to ignore values
-    match opt {
-        Some(10 | -10) => println!("10 is the magic number"),
-        // Matches every single possible inner value and ignores it
-        Some(_) | None => println!("We didn't get 10"),
-    }
-
-    // General wildcard
     match opt {
         Some(10 | -10) => println!("10 is the magic number"),
         // Matches every single possible pattern
