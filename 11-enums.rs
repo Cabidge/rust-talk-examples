@@ -10,8 +10,7 @@ enum Coin {
     Quarter,
 }
 
-// use statement to import enum variants into namespace
-// `use Coin::Variant;` to import a specific variant
+// Use a use statement to import enum variants into namespace
 use Coin::*;
 
 // Enum variants can have associated values

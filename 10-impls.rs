@@ -25,15 +25,10 @@ impl Complex {
 }
 
 fn main() {
-    // To call an associated function, use the `T::func` syntax
-    let mut comp = Complex::new(3.0, 4.0);
+    // To call an associated function, use the `<type>::<func>` syntax
+    let comp = Complex::new(3.0, 4.0);
     println!("{:#?}", comp);
 
     // Calling struct methods
-    println!("{}", comp.magnitude());
-
-    // We can update its fields after and get a new result
-    comp.real = -5.0;
-    comp.imag = 12.0;
     println!("{}", comp.magnitude());
 }

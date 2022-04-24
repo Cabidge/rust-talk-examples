@@ -14,6 +14,7 @@ fn main() {
     // Creating a mutable slice
     let slice = &mut arr[1..4];
     slice[0] = 100;
+
     println!("{:?}", slice);
     println!("{:?}", arr);
 }

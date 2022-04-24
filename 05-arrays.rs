@@ -18,6 +18,7 @@ fn main() {
 
     // Create an array with repeating values
     let x = [3; 8];
+
     // Print the contents of an array
     // Using `{:?}` formats the given value in "Debug" mode,
     // which includes more information meant for the programmer

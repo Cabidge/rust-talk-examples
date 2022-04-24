@@ -24,6 +24,8 @@ fn main() {
     // Ownership of values can be kept by giving a clone instead of the original value
     let mut v = vec![1, 2, 3];
     take(v.clone());
+
+    // `v` still retains ownership of the original vector
     v.push(4);
     println!("I still have the Vec: {:?}", v);
 

@@ -1,9 +1,8 @@
 fn main() {
-    let arr = [1, 2, 3, 4];
+    let arr = [1, 2, 3];
 
     // Create an iterator from an array
     let mut iter = arr.iter();
-    println!("{:?}", iter.next());
     println!("{:?}", iter.next());
     println!("{:?}", iter.next());
     println!("{:?}", iter.next());
@@ -20,9 +19,18 @@ fn main() {
         println!("{}", i);
     }
 
+    // Creating an inclusive range with `n..=m`
+    for i in 0..=10 {
+        println!("{}", i);
+    }
+
     // Consume an iterator to find the sum of elements
     let sum: i32 = (0..10).sum();
     println!("The sum is {}", sum);
+
+    // Iterator factorial function
+    let result = factorial(5);
+    println!("{}", result);
 
     // Nested function (NOT a closure!)
     fn square(n: i32) -> i32 {
@@ -48,10 +56,11 @@ fn main() {
         .map(|n| n * n)
         .filter(|n| n % 2 == 0)
         .collect();
+
     println!("{:?}", even_squares);
 }
 
 // Factorial function created with iterators
 fn factorial(n: u32) -> u32 {
-    (0..=n).product()
+    (1..=n).product()
 }

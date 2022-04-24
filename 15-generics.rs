@@ -12,19 +12,20 @@ impl<T> Point<T> {
 }
 
 fn main() {
-    // Rust can often infer the generic type
-    let p = Point { x: 1, y: 2 };
-    println!("x = {}, y = {}", p.x, p.y);
+    // Creating a Point<i32>
+    let p = Point::new(1, 2);
+    println!("{}, {}", p.x, p.y);
 
-    // Calling generic constructor
+    // Creating a Point<f64>
     let p = Point::new(1.2, 2.1);
-    println!("x = {}, y = {}", p.x, p.y);
+    println!("{}, {}", p.x, p.y);
 
-    // Calling a generic function
+    // Calling generic functions
     println!("{}", identity(1));
     println!("{}", identity(2.3));
-    print_len(vec![1, 2, 5]);
-    print_len(vec!["hi", "wowee"]);
+
+    print_len(&[1, 2, 5]);
+    print_len(&["hi", "wowee"]);
 }
 
 // Generic function definition
@@ -34,6 +35,6 @@ fn identity<T>(x: T) -> T { x }
 //fn add<T>(a: T, b: T) -> T { a + b }
 
 // Type constraints for specifying expected type behavior
-fn print_len<T>(v: Vec<T>) {
-    println!("The vec has {} elements", v.len());
+fn print_len<T>(a: &[T]) {
+    println!("The slice has {} elements", a.len());
 }

@@ -8,6 +8,7 @@ fn main() {
     // To create a mutable binding, you must add the `mut` keyword
     let mut x = 12;
     println!("x is {}", x);
+
     x = 3;
     println!("x is now {}", x);
 }

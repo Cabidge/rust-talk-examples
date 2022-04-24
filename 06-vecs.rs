@@ -4,12 +4,12 @@ fn main() {
     // To create a new Vec, use the Vec::new() function
     let mut v = Vec::new();
 
-    // Pushing elements to Vec
+    // Pushing elements to a vector
     v.push(1);
     v.push(2);
     v.push(3);
 
-    // Print the entire contents of Vec
+    // Print the entire contents of a vector
     println!("{:?}", v);
 
     // Index Vec with `[]`
@@ -23,13 +23,13 @@ fn main() {
     let v = vec![1, 2, 3];
     println!("{:?}", v);
 
-    // Calling a function that consumes a Vec
-    first_element(v);
+    // Calling a function that consumes a vector
+    print_first(v);
 
     // This no longer works!
     //println!("{:?}", v);
 }
 
-fn first_element(v: Vec<i32>) {
+fn print_first(v: Vec<i32>) {
     println!("The first element is {}", v[0]);
 }
