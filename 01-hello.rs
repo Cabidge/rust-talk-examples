@@ -2,7 +2,7 @@
 
 // Rust is a general-purpose programming language
 // with a focus on performance while ensuring
-// memory safety without using a garbage collector at runtime,
+// memory safety without using a garbage collector,
 // which is a form of automatic memory management
 
 // The following examples focus more on the interesting features
