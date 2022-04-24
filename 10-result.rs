@@ -2,10 +2,6 @@
 struct Error;
 
 fn main() {
-    // panic! to halt the program
-    //panic!();
-    // ^ Uncomment me!
-
     // Convey recoverable errors with the Result enum
     // A Result is either an `Ok` for success or `Err` for failure
 
