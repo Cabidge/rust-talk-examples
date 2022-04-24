@@ -12,9 +12,4 @@ fn main() {
 
     let maybe: Option<i32> = None; // None needs an explicit type
     println!("{:?}", maybe);
-
-    // Use expect for descriptive error message
-    let maybe = Some(12);
-    let x = opt.expect("Didn't have a number");
-    println!("{}", value);
 }
