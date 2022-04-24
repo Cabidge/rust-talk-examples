@@ -24,22 +24,26 @@ fn main() {
         println!("{}", i);
     }
 
-    // Consume an iterator to find the sum of elements
-    let sum: i32 = (0..10).sum();
-    println!("The sum is {}", sum);
+    // Calling the product method consumes the iterator
+    // and returns the product of all the numbers
+    println!("{}", (1..=4).product());
 
-    // Iterator factorial function
+    // Functions are allowed to be declared inside other functions
+    // Factorial function created with iterators
+    fn factorial(n: u32) -> u32 {
+        (1..=n).product()
+    }
+
     let result = factorial(5);
     println!("{}", result);
-
-    // Nested function (NOT a closure!)
-    fn square(n: i32) -> i32 {
-        n * n
-    }
 
     // Apply a function on every element of an iterator with map
     // The map function is a "higher order function" meaning that
     // it is a function that takes another function as a parameter
+    fn square(n: i32) -> i32 {
+        n * n
+    }
+
     let squares = (0..10).map(square);
     for i in squares {
         println!("{}", i);
@@ -58,9 +62,4 @@ fn main() {
         .collect();
 
     println!("{:?}", even_squares);
-}
-
-// Factorial function created with iterators
-fn factorial(n: u32) -> u32 {
-    (1..=n).product()
 }
