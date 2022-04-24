@@ -15,9 +15,6 @@ fn main() {
     let v = vec![1, 2, 3];
     println!("{:?}", v);
 
-    // Index Vec with `[]`
-    println!("v[1] is {}", v[1]);
-
     // Calling a function that consumes a vector
     print_first(v);
 
