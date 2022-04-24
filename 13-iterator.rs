@@ -46,14 +46,4 @@ fn main() {
     // if it has only one expression
     (0..10).map(|n| n * n)
         .for_each(|n| println!("{}", n));
-
-    // Create a Vec from iterators with collect
-    // Need to specify collect to a Vec
-    // Vec<_> means "collect to a Vec, but don't care what kind"
-    let even_squares: Vec<_> = (0..100)
-        .map(|n| n * n)
-        .filter(|n| n % 2 == 0)
-        .collect();
-
-    println!("{:?}", even_squares);
 }
