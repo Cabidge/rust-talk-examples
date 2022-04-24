@@ -35,6 +35,15 @@ fn main() {
 
     // The map method apply a function on every element of an iterator
     // You can create a function without defining a name by creating a closure
+    (0..10).map(factorial)
+        .for_each(
+            |n: i32| {
+                println!("{}", n);
+            }
+        );
+
+    // Closures don't always need type definitions and braces can be removed
+    // if it has only one expression
     (0..10).map(|n| n * n)
         .for_each(|n| println!("{}", n));
 
