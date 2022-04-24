@@ -33,19 +33,8 @@ fn main() {
     let result = factorial(5);
     println!("{}", result);
 
-    // Apply a function on every element of an iterator with map
-    // The map function is a "higher order function" meaning that
-    // it is a function that takes another function as a parameter
-    fn square(n: i32) -> i32 {
-        n * n
-    }
-
-    let squares = (0..10).map(square);
-    for i in squares {
-        println!("{}", i);
-    }
-
-    // Simplify higher order functions by using lambda expressions (closures)
+    // The map method apply a function on every element of an iterator
+    // You can create a function without defining a name by creating a closure
     (0..10).map(|n| n * n)
         .for_each(|n| println!("{}", n));
 
