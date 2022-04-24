@@ -8,13 +8,11 @@ fn main() {
     // Slices are another type of borrow so ownership rules apply
 
     // Slices function just like an array
-    println!("{}", slice[1]);
     println!("{:?}", slice);
 
     // Creating a mutable slice
     let slice = &mut arr[1..4];
     slice[0] = 100;
 
-    println!("{:?}", slice);
     println!("{:?}", arr);
 }
