@@ -11,17 +11,12 @@ fn main() {
     // Print the entire contents of a vector
     println!("{:?}", v);
 
-    // Index Vec with `[]`
-    println!("v[1] is {}", v[1]);
-
-    // Remove a specific index
-    // This is an O(n) operation because it shifts all subsequent elements over
-    println!("Removed v[0]: {}", v.remove(0));
-    println!("{:?}", v);
-
     // Use the vec macro for concise Vec creation
     let v = vec![1, 2, 3];
     println!("{:?}", v);
+
+    // Index Vec with `[]`
+    println!("v[1] is {}", v[1]);
 
     // Calling a function that consumes a vector
     print_first(v);
