@@ -1,8 +1,9 @@
 // Double slashes denote comments
 
 // Rust is a general-purpose programming language
-// with performance comparable to low level languages like C++
-// while ensuring memory safety without a garbage collector
+// with a focus on performance while ensuring
+// memory safety without using a garbage collector at runtime,
+// which is a form of automatic memory management
 
 // Rust is meant to be an alternative to languages like C and C++
 // while still feeling like a high level programming language
