@@ -3,10 +3,16 @@ fn main() {
 
     // Create an iterator from an array
     let mut iter = arr.iter();
+
+    // Iterators have a `next` function which returns an Option value
     println!("{:?}", iter.next());
     println!("{:?}", iter.next());
     println!("{:?}", iter.next());
     println!("{:?}", iter.next());
+
+    // Find the sum of all numbers in an iterator with the `sum` method
+    let result: i32 = arr.iter().sum();
+    println!("{}", result);
 
     // Loop over iterators with `for..in`
     for i in arr.iter() {
@@ -19,26 +25,17 @@ fn main() {
         println!("{}", i);
     }
 
-    // The sum of all numbers from 1 to 3 inclusive
-    let result: i32 = (1..=3).sum();
-    println!("{}", result);
-
     // Functions are allowed to be declared inside other functions
     fn square(n: i32) -> i32 {
         n * n
     }
 
     // The map method apply a function on every element of an iterator
-    // You can create a function without defining a name by creating a closure
-    (0..10).map(square)
-        .for_each(
-            |n: i32| {
-                println!("{}", n);
-            }
-        );
+    for i in (0..10).map(square) {
+        println!("{}", i);
+    }
 
-    // Closures don't always need type definitions and braces can be removed
-    // if it has only one expression
+    // You can create a function without defining its name by creating a closure
     (0..10).map(|n| n * n)
         .for_each(|n| println!("{}", n));
 }
