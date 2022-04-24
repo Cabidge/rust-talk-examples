@@ -19,16 +19,8 @@ fn main() {
         println!("{}", i);
     }
 
-    // The map method apply a function on every element of an iterator
-    for i in (0..10).map(square) {
+    // The map method applies a function on every element of an iterator
+    for i in (0..10).map(|n| n * n) {
         println!("{}", i);
     }
-
-    // You can create a function without defining its name by creating a closure
-    (0..10).map(|n| n * n)
-        .for_each(|n| println!("{}", n));
-}
-
-fn square(n: i32) -> i32 {
-    n * n
 }
