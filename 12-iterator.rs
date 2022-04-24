@@ -20,7 +20,7 @@ fn main() {
     }
 
     // The sum of all numbers from 1 to 3 inclusive
-    let result = (1..=3).sum();
+    let result: i32 = (1..=3).sum();
     println!("{}", result);
 
     // Functions are allowed to be declared inside other functions
