@@ -5,9 +5,9 @@
 // memory safety without using a garbage collector at runtime,
 // which is a form of automatic memory management
 
-// The following examples are meant to give a high-level overview
-// of the more interesting features of rust to help you decide
-// whether you'd like to choose rust as your next language to learn
+// The following examples focus more on the interesting features
+// of rust to hopefully help you decide whether you'd like to consider
+// learning more about rust
 
 // Rust has a C-like syntax with curly braces and semicolons
 // Functions are defined with the `fn` keyword
