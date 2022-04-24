@@ -9,9 +9,6 @@ fn main() {
     x[1] = 3;
     println!("The second element of x is {}", x[1]);
 
-    // Create an array with repeating values
-    let x = [3; 8];
-
     // Print the contents of an array
     println!("{:?}", x);
 
