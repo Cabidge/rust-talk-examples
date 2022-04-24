@@ -19,8 +19,7 @@ impl Complex {
     // Using the `self` keyword as the first parameter turns
     // this function into a method that can be called with the dot syntax
     fn magnitude(&self) -> f64 {
-        // `.sqrt()` is a f64 method for taking the sqaure root
-        (self.real * self.real + self.imag * self.imag).sqrt()
+        f64::sqrt(self.real * self.real + self.imag * self.imag)
     }
 }
 
