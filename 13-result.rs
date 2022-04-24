@@ -7,16 +7,9 @@ fn main() {
     // ^ Uncomment me!
 
     // Convey recoverable errors with the Result enum
+    // A Result is either an `Ok` for success or `Err` for failure
 
-    // Ok for a successful result
-    let result: Result<i32, Error> = Ok(12);
-    println!("{:?}", result);
-
-    // Err for an unsuccessful result
-    let result: Result<i32, Error> = Err(Error);
-    println!("{:?}", result);
-
-    // Parsing returns a Result
-    let result = "24".parse::<i32>();
+    // The parse method returns a Result
+    let result = "12".parse::<i32>();
     println!("{:?}", result);
 }
