@@ -12,13 +12,6 @@ fn main() {
 
     // Pipe to define alternatives
     match opt {
-        Some(10) | Some(-10) => println!("10 is the magic number"),
-        Some(n) => println!("We have the number {}", n),
-        None => println!("We don't have a number"),
-    }
-
-    // Patterns can be nested
-    match opt {
         Some(10 | -10) => println!("10 is the magic number"),
         Some(n) => println!("We have the number {}", n),
         None => println!("We don't have a number"),
